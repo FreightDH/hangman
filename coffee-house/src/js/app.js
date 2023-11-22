@@ -5,4 +5,4 @@ import * as menuFunctions from './files/burger.js';
 // Проверка поддержки webp, добавление класса webp или no-webp для HTML
 myFunctions.isWebp();
 // Модуль для работы с меню-бургер
-// menuFunctions.menuInit();
+menuFunctions.initMenu();

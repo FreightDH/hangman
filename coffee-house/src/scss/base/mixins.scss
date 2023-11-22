@@ -3,8 +3,8 @@
   @return $result;
 }
 
-@function toEm($px) {
-  $result: math.div($px, 16) + rtoEm;
+@function toRem($px) {
+  $result: math.div($px, 16) + rem;
   @return $result;
 }
 
@@ -40,13 +40,13 @@
   @if ($yIntersection == 0) {
     $yIntersection: 0.000001;
   }
-  $flyValue: #{toRtoEm($yIntersection)}' + ' #{$slope * 100}vw;
+  $flyValue: #{toRem($yIntersection)}' + ' #{$slope * 100}vw;
 
   // Получение значения свойства
-  $propertyValue: #{'clamp(' toRtoEm($minSize) ',' $flyValue ',' toRtoEm($startSize) ')'};
+  $propertyValue: #{'clamp(' toRem($minSize) ',' $flyValue ',' toRem($startSize) ')'};
   // Если отрицательные значения
   @if ($minSize > $startSize) {
-    $propertyValue: #{'clamp(' toRtoEm($startSize) ',' $flyValue ',' toRtoEm($minSize) ')'};
+    $propertyValue: #{'clamp(' toRem($startSize) ',' $flyValue ',' toRem($minSize) ')'};
   }
 
   // Если поддерживается clamp();
@@ -56,7 +56,7 @@
   // Если не поддерживается clamp();
   @supports not (#{$property}: $propertyValue) {
     #{$property}: calc(
-      #{toRtoEm($minSize)} + #{$addSize} * (100vw - #{toRtoEm($widthTo)}) / #{math.div($widthFrom, 16) - math.div(
+      #{toRem($minSize)} + #{$addSize} * (100vw - #{toRem($widthTo)}) / #{math.div($widthFrom, 16) - math.div(
           $widthTo,
           16
         )}
