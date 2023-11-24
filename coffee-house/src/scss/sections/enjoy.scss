@@ -1,0 +1,33 @@
+.enjoy {
+  &__body {
+    background:
+      url('@img/enjoy/01.jpg') center / cover,
+      lightgray 50% / cover no-repeat;
+    border-radius: 40px;
+  }
+
+  &__content {
+    max-width: 630px;
+    padding: 100px 0px 100px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__title {
+    color: #e1d4c9;
+    font-size: 72px;
+    line-height: 105%;
+    font-weight: 600;
+
+    span {
+      font-style: italic;
+      color: #b0907a;
+    }
+  }
+
+  &__text {
+    color: #e1d4c9;
+    line-height: 150%;
+  }
+}

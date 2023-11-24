@@ -1,10 +1,42 @@
 // <BUTTON>
-// Snippet code "a.btn"
 .btn {
   display: inline-block;
-  padding: 0px 0px;
+  max-width: 200px;
+  padding: 25px;
+
+  text-align: center;
+  font-weight: 600;
+
+  border-radius: 100px;
+  background: #e1d4c9;
+
+  span {
+    position: relative;
+    transition: right 0.2s ease 0s;
+    right: 0;
+
+    &::after {
+      content: url('@img/icons/coffee-cup.svg');
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: -2px;
+      right: -25px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease 0s;
+    }
+  }
 
   &:hover {
+    span {
+      right: 8px;
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
   &.fw {
