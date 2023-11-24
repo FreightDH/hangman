@@ -1,7 +1,8 @@
 @import './sections/enjoy';
+@import './sections/favorites';
 
 .page {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 105px;
 }
