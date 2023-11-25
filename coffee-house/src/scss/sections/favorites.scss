@@ -33,11 +33,11 @@
 
     border-radius: 100px;
     border: 1px solid #665f55;
-    background: url('@img/icons/slider-arrow.svg') center / 24px 24px no-repeat;
+    background: url('@img/icons/slider/slider-arrow.svg') center / 24px 24px no-repeat;
     transition: all 0.2s ease 0s;
 
     &:hover {
-      background: url('@img/icons/slider-arrow-light.svg') center / 24px 24px no-repeat;
+      background: url('@img/icons/slider/slider-arrow-light.svg') center / 24px 24px no-repeat;
       background-color: #665f55;
     }
 
