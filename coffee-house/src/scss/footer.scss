@@ -1,3 +1,129 @@
-//--------------------------------------------------------------
+.footer {
+  margin: 100px 0px 40px 0px;
 
-//--------------------------------------------------------------
+  &__body {
+    padding: 100px;
+    border-radius: 40px;
+    background-color: #665f55;
+
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+    color: #e1d4c9;
+    font-weight: 600;
+  }
+
+  &__column {
+    max-width: 530px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__title {
+    font-size: 60px;
+    line-height: 125%;
+
+    span {
+      color: #b0907a;
+      font-style: italic;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__link {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    border: 1px solid #c1b6ad;
+    transition: all 0.2s ease 0s;
+
+    &.link--twitter {
+      background: url('@img/icons/footer-links/twitter.svg') center/24px 24px no-repeat;
+
+      &:hover {
+        background:
+          url('@img/icons/footer-links/twitter-dark.svg') center/24px 24px no-repeat,
+          #e1d4c9;
+      }
+    }
+
+    &.link--instagram {
+      background: url('@img/icons/footer-links/instagram.svg') center/24px 24px no-repeat;
+
+      &:hover {
+        background:
+          url('@img/icons/footer-links/instagram-dark.svg') center/24px 24px no-repeat,
+          #e1d4c9;
+      }
+    }
+
+    &.link--facebook {
+      background: url('@img/icons/footer-links/facebook.svg') center/24px 24px no-repeat;
+
+      &:hover {
+        background:
+          url('@img/icons/footer-links/facebook-dark.svg') center/24px 24px no-repeat,
+          #e1d4c9;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 125%;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__contact {
+    display: flex;
+    gap: 8px;
+    line-height: 150%;
+
+    a {
+      display: flex;
+      gap: 8px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background-color: #e1d4c9;
+        transition: all 0.3s ease 0s;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+    }
+  }
+}
