@@ -1,4 +1,14 @@
 // Формы
-@import "base/forms/forms";
+@import 'base/forms/forms';
 
 // Общие стили
+.section--title {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+
+  span {
+    color: #b0907a;
+    font-style: italic;
+  }
+}
