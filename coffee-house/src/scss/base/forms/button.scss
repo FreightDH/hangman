@@ -1,41 +1,30 @@
 // <BUTTON>
 .btn {
   display: inline-block;
-  max-width: 200px;
-  padding: 25px;
-
-  text-align: center;
-  font-weight: 600;
+  width: 200px;
+  padding: 12px 20px;
 
   border-radius: 100px;
-  background: #e1d4c9;
+  border: 1px solid #665f55;
 
-  span {
-    position: relative;
-    transition: right 0.2s ease 0s;
-    right: 0;
+  display: flex;
+  gap: 8px;
 
-    &::after {
-      content: url('@img/icons/coffee-cup.svg');
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      top: -2px;
-      right: -25px;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.2s ease 0s;
-    }
+  img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
   }
 
-  &:hover {
-    span {
-      right: 8px;
+  span {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 140%;
 
-      &::after {
-        opacity: 1;
-        visibility: visible;
-      }
+    span {
+      display: block;
+      font-size: 16px;
+      line-height: 150%;
     }
   }
 
