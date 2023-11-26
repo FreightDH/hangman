@@ -17,11 +17,11 @@ module.exports = {
     'no-multi-assign': 'off',
     'no-plusplus': 'off',
     'import/extensions': 'off',
-    "prettier/prettier": [
-      "error",
+    'prettier/prettier': [
+      'error',
       {
-        "endOfLine": "auto"
-      }
-    ]
+        endOfLine: 'auto',
+      },
+    ],
   },
 };
