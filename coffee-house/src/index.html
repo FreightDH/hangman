@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="ru">
-  @@include('html/layout/head.html', { "title":"Coffee House" })
+  @@include('html/layout/head.html', { "title": "Coffee House", "css": "css/style.min.css" })
   <body>
     <div class="wrapper">
       @@include('html/layout/header.html', {})
       <main class="page">
-        @@include('html/sections/enjoy.html', {})
+        @@include('html/sections/enjoy.html', {}) 
         @@include('html/sections/favorites.html', {})
-        @@include('html/sections/about.html', {})
+        @@include('html/sections/about.html', {}) 
         @@include('html/sections/mobile.html', {})
       </main>
       @@include('html/layout/footer.html', {})

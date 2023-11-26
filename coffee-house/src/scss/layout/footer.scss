@@ -50,31 +50,31 @@
     transition: all 0.2s ease 0s;
 
     &.link--twitter {
-      background: url('@img/icons/footer-links/twitter.svg') center/24px 24px no-repeat;
+      background: url('/@img/icons/footer-links/twitter.svg') center/24px 24px no-repeat;
 
       &:hover {
         background:
-          url('@img/icons/footer-links/twitter-dark.svg') center/24px 24px no-repeat,
+          url('/@img/icons/footer-links/twitter-dark.svg') center/24px 24px no-repeat,
           #e1d4c9;
       }
     }
 
     &.link--instagram {
-      background: url('@img/icons/footer-links/instagram.svg') center/24px 24px no-repeat;
+      background: url('/@img/icons/footer-links/instagram.svg') center/24px 24px no-repeat;
 
       &:hover {
         background:
-          url('@img/icons/footer-links/instagram-dark.svg') center/24px 24px no-repeat,
+          url('/@img/icons/footer-links/instagram-dark.svg') center/24px 24px no-repeat,
           #e1d4c9;
       }
     }
 
     &.link--facebook {
-      background: url('@img/icons/footer-links/facebook.svg') center/24px 24px no-repeat;
+      background: url('/@img/icons/footer-links/facebook.svg') center/24px 24px no-repeat;
 
       &:hover {
         background:
-          url('@img/icons/footer-links/facebook-dark.svg') center/24px 24px no-repeat,
+          url('/@img/icons/footer-links/facebook-dark.svg') center/24px 24px no-repeat,
           #e1d4c9;
       }
     }

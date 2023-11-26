@@ -50,6 +50,7 @@ const config = {
   },
   entry: {
     app: `${paths.src}/js/app.js`,
+    menu: `${paths.src}/js/menu.js`,
   },
   output: {
     path: `${paths.build}`,
