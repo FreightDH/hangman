@@ -2,34 +2,42 @@
 .btn {
   display: inline-block;
   width: 200px;
-  padding: 12px 20px;
+  padding: 12px 20px 12px 64px;
+
+  display: flex;
+  flex-direction: column;
+  // gap: 8px;
 
   border-radius: 100px;
   border: 1px solid #665f55;
+  background: url('@img/icons/mobile/app-store.svg') 18px 12px / 36px 36px no-repeat;
+  transition: all 0.2s ease 0s;
 
-  display: flex;
-  gap: 8px;
-
-  img {
-    width: 36px;
-    height: 36px;
-    object-fit: cover;
-  }
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
 
   span {
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 140%;
-
-    span {
-      display: block;
-      font-size: 16px;
-      line-height: 150%;
-    }
+    display: block;
+    font-size: 16px;
+    line-height: 150%;
   }
 
-  &.fw {
-    width: 100%;
+  &.google-play {
+    background: url('@img/icons/mobile/google-play.svg') 18px 12px / 36px 36px no-repeat;
+  }
+
+  &:hover {
+    background:
+      url('@img/icons/mobile/app-store-light.svg') 18px 12px / 36px 36px no-repeat,
+      #665f55;
+    color: #e1d4c9;
+
+    &.google-play {
+      background:
+        url('@img/icons/mobile/google-play-light.svg') 18px 12px / 36px 36px no-repeat,
+        #665f55;
+    }
   }
 }
 // </BUTTON>
