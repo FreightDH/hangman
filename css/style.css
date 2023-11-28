@@ -787,31 +787,18 @@ body {
   transition: all 0.3s ease 0s;
 }
 
-.footer__link.link--twitter {
-  background: url("../img/icons/footer-links/twitter.svg") center/24px 24px no-repeat;
+.footer__link svg path {
+  stroke: #e1d4c9;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-.footer__link.link--twitter:hover {
-  background: url("../img/icons/footer-links/twitter-dark.svg") center/24px 24px no-repeat;
+.footer__link:hover {
   background-color: #e1d4c9;
 }
 
-.footer__link.link--instagram {
-  background: url("../img/icons/footer-links/instagram.svg") center/24px 24px no-repeat;
-}
-
-.footer__link.link--instagram:hover {
-  background: url("../img/icons/footer-links/instagram-dark.svg") center/24px 24px no-repeat;
-  background-color: #e1d4c9;
-}
-
-.footer__link.link--facebook {
-  background: url("../img/icons/footer-links/facebook.svg") center/24px 24px no-repeat;
-}
-
-.footer__link.link--facebook:hover {
-  background: url("../img/icons/footer-links/facebook-dark.svg") center/24px 24px no-repeat;
-  background-color: #e1d4c9;
+.footer__link:hover svg path {
+  stroke: #403f3d;
 }
 
 .footer__text {
@@ -873,43 +860,42 @@ body {
 .btn {
   display: inline-block;
   width: 200px;
-  padding: 12px 20px 12px 64px;
+  padding: 12px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  gap: 8px;
   border-radius: 100px;
   border: 1px solid #665f55;
-  background: url("../img/icons/mobile/app-store.svg") 18px 12px/36px 36px no-repeat;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.btn svg path {
+  fill: #403f3d;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn span {
   font-size: 10px;
   font-weight: 600;
   line-height: 140%;
 }
 
-.btn span {
+.btn span span {
   display: block;
   font-size: 16px;
   line-height: 150%;
 }
 
-.btn.google-play {
-  background: url("../img/icons/mobile/google-play.svg") 18px 12px/36px 36px no-repeat;
-}
-
 .btn:hover {
-  background: url("../img/icons/mobile/app-store-light.svg") 18px 12px/36px 36px no-repeat;
   background-color: #665f55;
   color: #e1d4c9;
 }
 
-.btn:hover.google-play {
-  background: url("../img/icons/mobile/google-play-light.svg") 18px 12px/36px 36px no-repeat;
-  background-color: #665f55;
+.btn:hover svg path {
+  fill: #e1d4c9;
 }
 
 .section--title {
