@@ -783,32 +783,35 @@ body {
           align-items: center;
   border-radius: 50%;
   border: 1px solid #c1b6ad;
-  -webkit-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .footer__link.link--twitter {
-  background: url("../../img/icons/footer-links/twitter.svg") center/24px 24px no-repeat;
+  background: url("../img/icons/footer-links/twitter.svg") center/24px 24px no-repeat;
 }
 
 .footer__link.link--twitter:hover {
-  background: url("../../img/icons/footer-links/twitter-dark.svg") center/24px 24px no-repeat, #e1d4c9;
+  background: url("../img/icons/footer-links/twitter-dark.svg") center/24px 24px no-repeat;
+  background-color: #e1d4c9;
 }
 
 .footer__link.link--instagram {
-  background: url("../../img/icons/footer-links/instagram.svg") center/24px 24px no-repeat;
+  background: url("../img/icons/footer-links/instagram.svg") center/24px 24px no-repeat;
 }
 
 .footer__link.link--instagram:hover {
-  background: url("../../img/icons/footer-links/instagram-dark.svg") center/24px 24px no-repeat, #e1d4c9;
+  background: url("../img/icons/footer-links/instagram-dark.svg") center/24px 24px no-repeat;
+  background-color: #e1d4c9;
 }
 
 .footer__link.link--facebook {
-  background: url("../../img/icons/footer-links/facebook.svg") center/24px 24px no-repeat;
+  background: url("../img/icons/footer-links/facebook.svg") center/24px 24px no-repeat;
 }
 
 .footer__link.link--facebook:hover {
-  background: url("../../img/icons/footer-links/facebook-dark.svg") center/24px 24px no-repeat, #e1d4c9;
+  background: url("../img/icons/footer-links/facebook-dark.svg") center/24px 24px no-repeat;
+  background-color: #e1d4c9;
 }
 
 .footer__text {
@@ -881,8 +884,8 @@ body {
   border-radius: 100px;
   border: 1px solid #665f55;
   background: url("../img/icons/mobile/app-store.svg") 18px 12px/36px 36px no-repeat;
-  -webkit-transition: all 0.25s ease 0s;
-  transition: all 0.25s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   font-size: 10px;
   font-weight: 600;
   line-height: 140%;
@@ -899,12 +902,14 @@ body {
 }
 
 .btn:hover {
-  background: url("../img/icons/mobile/app-store-light.svg") 18px 12px/36px 36px no-repeat, #665f55;
+  background: url("../img/icons/mobile/app-store-light.svg") 18px 12px/36px 36px no-repeat;
+  background-color: #665f55;
   color: #e1d4c9;
 }
 
 .btn:hover.google-play {
-  background: url("../img/icons/mobile/google-play-light.svg") 18px 12px/36px 36px no-repeat, #665f55;
+  background: url("../img/icons/mobile/google-play-light.svg") 18px 12px/36px 36px no-repeat;
+  background-color: #665f55;
 }
 
 .section--title {
