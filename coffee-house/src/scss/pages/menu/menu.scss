@@ -39,6 +39,10 @@
         background-color: #e1d4c9;
       }
     }
+
+    &.tab--active {
+      pointer-events: none;
+    }
   }
 
   &__icon {
