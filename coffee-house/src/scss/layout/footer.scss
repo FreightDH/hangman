@@ -49,30 +49,16 @@
     border: 1px solid #c1b6ad;
     transition: all 0.3s ease 0s;
 
-    &.link--twitter {
-      background: url('../@img/icons/footer-links/twitter.svg') center/24px 24px no-repeat;
-
-      &:hover {
-        background: url('../@img/icons/footer-links/twitter-dark.svg') center/24px 24px no-repeat;
-        background-color: #e1d4c9;
-      }
+    svg path {
+      stroke: #e1d4c9;
+      transition: all 0.3s ease 0s;
     }
 
-    &.link--instagram {
-      background: url('../@img/icons/footer-links/instagram.svg') center/24px 24px no-repeat;
+    &:hover {
+      background-color: #e1d4c9;
 
-      &:hover {
-        background: url('../@img/icons/footer-links/instagram-dark.svg') center/24px 24px no-repeat;
-        background-color: #e1d4c9;
-      }
-    }
-
-    &.link--facebook {
-      background: url('../@img/icons/footer-links/facebook.svg') center/24px 24px no-repeat;
-
-      &:hover {
-        background: url('../@img/icons/footer-links/facebook-dark.svg') center/24px 24px no-repeat;
-        background-color: #e1d4c9;
+      svg path {
+        stroke: #403f3d;
       }
     }
   }
