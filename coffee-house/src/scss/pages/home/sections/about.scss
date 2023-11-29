@@ -3,12 +3,24 @@
     padding: 40px 0px 0px 0px;
     display: flex;
     gap: 40px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__column {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    // &:last-child {
+    //   @media (max-width: $tablet) {
+    //     display: none;
+    //   }
+    // }
   }
 
   &__item {
@@ -16,6 +28,18 @@
     max-height: 590px;
     overflow: hidden;
     border-radius: 20px;
+    position: relative;
+
+    @media (max-width: $tablet) {
+      max-width: none;
+      max-height: none;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1);
+      }
+    }
 
     img {
       width: 100%;
@@ -25,13 +49,19 @@
       transform: scale(1.1);
       transition: all 0.2s ease 0s;
 
-      &:hover {
-        transform: scale(1);
+      @media (max-width: $tablet) {
+        width: 688px;
+        height: 590px;
+        transform: scale(1.05);
       }
     }
 
     &.item--small {
       max-height: 430px;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
     }
   }
 }

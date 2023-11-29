@@ -12,6 +12,12 @@
 
     color: #e1d4c9;
     font-weight: 600;
+
+    @media (max-width: 1110px) {
+      padding: 100px 60px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__column {

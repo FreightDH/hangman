@@ -43,11 +43,19 @@
 
     &.navigation--left {
       left: 5px;
+
+      @media (max-width: $mobile) {
+        left: 0px;
+      }
     }
 
     &.navigation--right {
       right: 5px;
       transform: rotate(180deg);
+
+      @media (max-width: $mobile) {
+        right: 0px;
+      }
     }
   }
 }
