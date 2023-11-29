@@ -70,7 +70,18 @@
       }
     }
 
-    &:hover,
+    @media (min-width: $mobile) {
+      &:hover {
+        cursor: pointer;
+        color: #e1d4c9;
+        background-color: #665f55;
+
+        .tabs__icon {
+          background-color: #e1d4c9;
+        }
+      }
+    }
+
     &.tab--active {
       cursor: pointer;
       color: #e1d4c9;
@@ -119,12 +130,14 @@
     border-radius: 40px;
     border: 1px solid #c1b6ad;
 
-    &:hover {
-      cursor: pointer;
+    @media (min-width: $mobile) {
+      &:hover {
+        cursor: pointer;
 
-      .card__image {
-        img {
-          transform: scale(1);
+        .card__image {
+          img {
+            transform: scale(1);
+          }
         }
       }
     }
