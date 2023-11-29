@@ -2,119 +2,124 @@
 <html lang="en">
   @@include('html/layout/head.html', { "title": "Coffee House | Menu", "css": "../../css/style.min.css" })
   <body>
-    @@include('html/layout/headerMenu.html', {})
-    <main class="page">
-      <div class="page__container">
-        <div class="page__body">
-          <h1 class="menu__title section--title">
-            Behind each of our cups hides an <span>amazing surprise</span>
-          </h1>
-          <ul class="menu__tabs tabs">
-            <li class="tabs__item tab--active">
-              <div class="tabs__icon"><img src="../../@img/icons/tabs/coffee.svg" alt="coffee-icon" /></div>
-              <div class="tabs__text">Coffee</div>
-            </li>
-            <li class="tabs__item">
-              <div class="tabs__icon"><img src="../../@img/icons/tabs/tea.svg" alt="coffee-icon" /></div>
-              <div class="tabs__text">Tea</div>
-            </li>
-            <li class="tabs__item">
-              <div class="tabs__icon">
-                <img src="../../@img/icons/tabs/dessert.svg" alt="coffee-icon" />
-              </div>
-              <div class="tabs__text">Dessert</div>
-            </li>
-          </ul>
-          <ul class="menu__cards cards">
-            <li class="cards__card">
-              <div class="card__image">
-                <img src="../../@img/menu/coffee/coffee-1.png" alt="irish-coffee" />
-              </div>
-              <div class="card__body">
-                <div class="card__name">Irish coffee</div>
-                <p class="card__text">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-                <div class="card__cost">$7.00</div>
-              </div>
-            </li>
-            <li class="cards__card">
-              <div class="card__image">
-                <img src="../../@img/menu/coffee/coffee-2.png" alt="kahlua-coffee" />
-              </div>
-              <div class="card__body">
-                <div class="card__name">Kahlua coffee</div>
-                <p class="card__text">
-                  Classic coffee with milk and Kahlua liqueur under a cap of frothed milk
-                </p>
-                <div class="card__cost">$7.00</div>
-              </div>
-            </li>
-            <li class="cards__card">
-              <div class="card__image">
-                <img src="../../@img/menu/coffee/coffee-3.png" alt="honey-raf" />
-              </div>
-              <div class="card__body">
-                <div class="card__name">Honey raf</div>
-                <p class="card__text">Espresso with frothed milk, cream and aromatic honey</p>
-                <div class="card__cost">$5.50</div>
-              </div>
-            </li>
-            <li class="cards__card">
-              <div class="card__image">
-                <img src="../../@img/menu/coffee/coffee-4.png" alt="ice-cappuccino" />
-              </div>
-              <div class="card__body">
-                <div class="card__name">Ice cappuccino</div>
-                <p class="card__text">Cappuccino with soft thick foam in summer version with ice</p>
-                <div class="card__cost">$5.00</div>
-              </div>
-            </li>
-            <li class="cards__card">
-              <div class="card__image">
-                <img src="../../@img/menu/coffee/coffee-5.png" alt="espresso" />
-              </div>
-              <div class="card__body">
-                <div class="card__name">Espresso</div>
-                <p class="card__text">Classic black coffee</p>
-                <div class="card__cost">$4.50</div>
-              </div>
-            </li>
-            <li class="cards__card">
-              <div class="card__image">
-                <img src="../../@img/menu/coffee/coffee-6.png" alt="latte" />
-              </div>
-              <div class="card__body">
-                <div class="card__name">Latte</div>
-                <p class="card__text">
-                  Espresso coffee with the addition of steamed milk and dense milk foam
-                </p>
-                <div class="card__cost">$5.50</div>
-              </div>
-            </li>
-            <li class="cards__card">
-              <div class="card__image">
-                <img src="../../@img/menu/coffee/coffee-7.png" alt="latte-macchiato" />
-              </div>
-              <div class="card__body">
-                <div class="card__name">Latte macchiato</div>
-                <p class="card__text">Espresso with frothed milk and chocolate</p>
-                <div class="card__cost">$5.50</div>
-              </div>
-            </li>
-            <li class="cards__card">
-              <div class="card__image">
-                <img src="../../@img/menu/coffee/coffee-8.png" alt="coffee-with-cognac" />
-              </div>
-              <div class="card__body">
-                <div class="card__name">Coffee with cognac</div>
-                <p class="card__text">Fragrant black coffee with cognac and whipped cream</p>
-                <div class="card__cost">$6.50</div>
-              </div>
-            </li>
-          </ul>
+    <div class="wrapper">
+      @@include('html/layout/headerMenu.html', {})
+      <main class="page">
+        <div class="page__container">
+          <div class="page__body">
+            <h1 class="menu__title section--title">
+              Behind each of our cups hides an <span>amazing surprise</span>
+            </h1>
+            <ul class="menu__tabs tabs">
+              <li class="tabs__item tab--active">
+                <div class="tabs__icon"><img src="../../@img/icons/tabs/coffee.svg" alt="coffee-icon" /></div>
+                <div class="tabs__text">Coffee</div>
+              </li>
+              <li class="tabs__item">
+                <div class="tabs__icon"><img src="../../@img/icons/tabs/tea.svg" alt="coffee-icon" /></div>
+                <div class="tabs__text">Tea</div>
+              </li>
+              <li class="tabs__item">
+                <div class="tabs__icon">
+                  <img src="../../@img/icons/tabs/dessert.svg" alt="coffee-icon" />
+                </div>
+                <div class="tabs__text">Dessert</div>
+              </li>
+            </ul>
+            <ul class="menu__cards cards">
+              <li class="cards__card">
+                <div class="card__image">
+                  <img src="../../@img/menu/coffee/coffee-1.png" alt="irish-coffee" />
+                </div>
+                <div class="card__body">
+                  <div class="card__name">Irish coffee</div>
+                  <p class="card__text">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                  <div class="card__cost">$7.00</div>
+                </div>
+              </li>
+              <li class="cards__card">
+                <div class="card__image">
+                  <img src="../../@img/menu/coffee/coffee-2.png" alt="kahlua-coffee" />
+                </div>
+                <div class="card__body">
+                  <div class="card__name">Kahlua coffee</div>
+                  <p class="card__text">
+                    Classic coffee with milk and Kahlua liqueur under a cap of frothed milk
+                  </p>
+                  <div class="card__cost">$7.00</div>
+                </div>
+              </li>
+              <li class="cards__card">
+                <div class="card__image">
+                  <img src="../../@img/menu/coffee/coffee-3.png" alt="honey-raf" />
+                </div>
+                <div class="card__body">
+                  <div class="card__name">Honey raf</div>
+                  <p class="card__text">Espresso with frothed milk, cream and aromatic honey</p>
+                  <div class="card__cost">$5.50</div>
+                </div>
+              </li>
+              <li class="cards__card">
+                <div class="card__image">
+                  <img src="../../@img/menu/coffee/coffee-4.png" alt="ice-cappuccino" />
+                </div>
+                <div class="card__body">
+                  <div class="card__name">Ice cappuccino</div>
+                  <p class="card__text">Cappuccino with soft thick foam in summer version with ice</p>
+                  <div class="card__cost">$5.00</div>
+                </div>
+              </li>
+              <li class="cards__card">
+                <div class="card__image">
+                  <img src="../../@img/menu/coffee/coffee-5.png" alt="espresso" />
+                </div>
+                <div class="card__body">
+                  <div class="card__name">Espresso</div>
+                  <p class="card__text">Classic black coffee</p>
+                  <div class="card__cost">$4.50</div>
+                </div>
+              </li>
+              <li class="cards__card">
+                <div class="card__image">
+                  <img src="../../@img/menu/coffee/coffee-6.png" alt="latte" />
+                </div>
+                <div class="card__body">
+                  <div class="card__name">Latte</div>
+                  <p class="card__text">
+                    Espresso coffee with the addition of steamed milk and dense milk foam
+                  </p>
+                  <div class="card__cost">$5.50</div>
+                </div>
+              </li>
+              <li class="cards__card">
+                <div class="card__image">
+                  <img src="../../@img/menu/coffee/coffee-7.png" alt="latte-macchiato" />
+                </div>
+                <div class="card__body">
+                  <div class="card__name">Latte macchiato</div>
+                  <p class="card__text">Espresso with frothed milk and chocolate</p>
+                  <div class="card__cost">$5.50</div>
+                </div>
+              </li>
+              <li class="cards__card">
+                <div class="card__image">
+                  <img src="../../@img/menu/coffee/coffee-8.png" alt="coffee-with-cognac" />
+                </div>
+                <div class="card__body">
+                  <div class="card__name">Coffee with cognac</div>
+                  <p class="card__text">Fragrant black coffee with cognac and whipped cream</p>
+                  <div class="card__cost">$6.50</div>
+                </div>
+              </li>
+            </ul>
+            <div class="menu__refresh">
+              <img src="../../@img/icons/menu/refresh.svg" alt="refresh-icon" />
+            </div>
+          </div>
         </div>
-      </div>
-    </main>
-    @@include('html/layout/footerMenu.html', {})
+      </main>
+      @@include('html/layout/footerMenu.html', {})
+    </div>
     <script src="../../js/menu.min.js"></script>
   </body>
 </html>

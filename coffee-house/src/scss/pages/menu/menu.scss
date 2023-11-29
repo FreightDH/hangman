@@ -13,11 +13,46 @@
     max-width: 800px;
     text-align: center;
   }
+
+  &__refresh {
+    display: none;
+    padding: 18px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid #665f55;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('width', 60, 45, 379.98, 319.98);
+      @include adaptiveValue('height', 60, 45, 379.98, 319.98);
+      @include adaptiveValue('padding', 18, 10, 379.98, 319.98);
+    }
+  }
 }
 
 .tabs {
   display: flex;
   gap: 16px;
+
+  @media (max-width: $mobile) {
+    @include adaptiveValue('gap', 16, 8, 767.98, 379.98);
+  }
+
+  @media (max-width: $mobileSmall) {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   &__item {
     padding: 8px 16px 8px 8px;
@@ -28,6 +63,12 @@
     border-radius: 100px;
     border: 1px solid #c1b6ad;
     transition: all 0.2s ease 0s;
+
+    @media (max-width: $mobileSmall) {
+      &:last-child {
+        order: 2;
+      }
+    }
 
     &:hover,
     &.tab--active {
@@ -66,11 +107,13 @@
 
 .cards {
   display: flex;
+  justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
 
   &__card {
     max-width: 310px;
+    min-height: 505px;
     display: flex;
     flex-direction: column;
     border-radius: 40px;
@@ -85,6 +128,17 @@
         }
       }
     }
+
+    @media (max-width: 768px) {
+      &:nth-child(n + 5) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('max-width', 310, 290, 379.98, 319.98);
+      @include adaptiveValue('min-height', 505, 475, 379.98, 319.98);
+    }
   }
 }
 
@@ -94,6 +148,11 @@
     height: 308px;
     border-radius: 40px;
     overflow: hidden;
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('width', 308, 290, 379.98, 319.98);
+      @include adaptiveValue('height', 308, 290, 379.98, 319.98);
+    }
 
     img {
       width: 100%;
@@ -118,10 +177,18 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 125%;
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('font-size', 24, 20, 379.98, 319.98);
+    }
   }
 
   &__text {
     flex: 1 1 auto;
     line-height: 150%;
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('font-size', 16, 14, 379.98, 319.98);
+    }
   }
 }
