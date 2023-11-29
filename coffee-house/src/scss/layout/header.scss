@@ -46,11 +46,19 @@
       }
     }
 
-    @media (max-width: $mobile) {
+    @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue('right', 40, 15, 767.98, 379.98);
+    }
+
+    @media (max-width: $mobileSmall) {
+      right: 15px;
     }
 
     .menu-open & {
@@ -71,7 +79,7 @@
   }
 
   &__body {
-    @media (max-width: $mobile) {
+    @media (max-width: 768px) {
       position: fixed;
       width: 100%;
       height: 100%;
@@ -93,7 +101,7 @@
     display: flex;
     gap: 40px;
 
-    @media (max-width: $mobile) {
+    @media (max-width: 768px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -107,7 +115,7 @@
 
     font-weight: 600;
 
-    @media (max-width: $mobile) {
+    @media (max-width: 768px) {
       font-size: 32px;
     }
 
@@ -122,7 +130,7 @@
           @include adaptiveValue('margin-left', 330, 0, 1390, 767.98);
         }
 
-        @media (max-width: $mobile) {
+        @media (max-width: 768px) {
           margin: 40px 0px 0px 0px;
         }
 
@@ -134,7 +142,7 @@
           position: relative;
           top: -4px;
 
-          @media (max-width: $mobile) {
+          @media (max-width: 768px) {
             margin: 0px 0px 0px 16px;
             width: 40px;
             height: 40px;
@@ -155,16 +163,21 @@
       }
     }
 
-    &.active,
-    &:hover {
-      span::after {
-        left: 0;
-        width: 100%;
+    @media (min-width: $mobile) {
+      &:hover {
+        span::after {
+          left: 0;
+          width: 100%;
+        }
       }
     }
 
     &.active {
       pointer-events: none;
+      span::after {
+        left: 0;
+        width: 100%;
+      }
     }
   }
 }

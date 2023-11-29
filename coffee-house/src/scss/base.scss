@@ -11,4 +11,12 @@
     color: #b0907a;
     font-style: italic;
   }
+
+  @media (max-width: $mobile) {
+    @include adaptiveValue('font-size', 60, 32, 767.98, 379.98);
+  }
+
+  @media (max-width: $mobileSmall) {
+    @include adaptiveValue('font-size', 32, 28, 379.98, 319.98);
+  }
 }

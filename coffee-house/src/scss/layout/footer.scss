@@ -13,10 +13,24 @@
     color: #e1d4c9;
     font-weight: 600;
 
-    @media (max-width: 1110px) {
+    @media (max-width: 1120px) {
       padding: 100px 60px;
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue('gap', 100, 40, 767.98, 379.98);
+      @include adaptiveValue('padding-top', 100, 60, 767.98, 379.98);
+      @include adaptiveValue('padding-bottom', 100, 63, 767.98, 379.98);
+      @include adaptiveValue('padding-left', 60, 16, 767.98, 379.98);
+      @include adaptiveValue('padding-right', 60, 16, 767.98, 379.98);
+    }
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('gap', 40, 20, 379.98, 319.98);
+      @include adaptiveValue('padding-top', 60, 45, 379.98, 319.98);
+      @include adaptiveValue('padding-bottom', 60, 45, 379.98, 319.98);
     }
   }
 
@@ -26,11 +40,23 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('gap', 40, 20, 379.98, 319.98);
+    }
   }
 
   &__title {
     font-size: 60px;
     line-height: 125%;
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue('font-size', 60, 32, 767.98, 379.98);
+    }
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('font-size', 32, 28, 379.98, 319.98);
+    }
 
     span {
       color: #b0907a;
@@ -60,11 +86,23 @@
       transition: all 0.3s ease 0s;
     }
 
-    &:hover {
-      background-color: #e1d4c9;
+    @media (min-width: $mobile) {
+      &:hover {
+        background-color: #e1d4c9;
 
-      svg path {
-        stroke: #403f3d;
+        svg path {
+          stroke: #403f3d;
+        }
+      }
+    }
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('width', 60, 45, 379.98, 319.98);
+      @include adaptiveValue('height', 60, 45, 379.98, 319.98);
+
+      svg {
+        @include adaptiveValue('width', 24, 22, 379.98, 319.98);
+        @include adaptiveValue('height', 24, 22, 379.98, 319.98);
       }
     }
   }
@@ -72,6 +110,10 @@
   &__text {
     font-size: 24px;
     line-height: 125%;
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('font-size', 24, 20, 379.98, 319.98);
+    }
   }
 
   &__contacts {
@@ -84,6 +126,10 @@
     display: flex;
     gap: 8px;
     line-height: 150%;
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('font-size', 16, 14, 379.98, 319.98);
+    }
 
     a {
       display: flex;
@@ -101,10 +147,12 @@
         transition: all 0.3s ease 0s;
       }
 
-      &:hover {
-        &::after {
-          width: 100%;
-          left: 0;
+      @media (min-width: $mobile) {
+        &:hover {
+          &::after {
+            width: 100%;
+            left: 0;
+          }
         }
       }
     }

@@ -31,9 +31,9 @@ $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 // Брейк-поинты
 $pc: toEm($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
-$tablet: toEm(992); // Планшеты, некоторые телефоны в горизонтальном положении
-$mobile: toEm(768); // Телефоны L
-$mobileSmall: toEm(480); // Телефоны S
+$tablet: toEm(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: toEm(767.98); // Телефоны L
+$mobileSmall: toEm(379.98); // Телефоны S
 
 // Тип адаптива
 // 1 = отзывчивость (у контейнера нет брейкпоинтов),
@@ -56,6 +56,15 @@ $responsiveType: 1;
       @media (max-width: $pc) {
         @include adaptiveValue('padding-left', 15, 40, 1390, 767.98);
         @include adaptiveValue('padding-right', 15, 40, 1390, 767.98);
+      }
+
+      @media (max-width: $mobile) {
+        @include adaptiveValue('padding-left', 40, 16, 767.98, 379.98);
+        @include adaptiveValue('padding-right', 40, 16, 767.98, 379.98);
+      }
+
+      @media (max-width: $mobileSmall) {
+        padding: 0 16px;
       }
     }
   }

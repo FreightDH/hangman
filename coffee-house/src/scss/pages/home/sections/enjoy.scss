@@ -7,17 +7,27 @@
   }
 
   &__content {
-    max-width: 630px;
+    max-width: 620px;
     padding: 100px 0px 100px 100px;
     display: flex;
     flex-direction: column;
     gap: 40px;
 
     @media (max-width: $pc) {
-      max-width: none;
-      // @include adaptiveValue('max-width', 630, 530);
-      @include adaptiveValue('padding-right', 0, 60, 1390, 767.98);
       @include adaptiveValue('padding-left', 100, 60, 1390, 767.98);
+    }
+
+    @media (max-width: $mobile) {
+      max-width: none;
+      @include adaptiveValue('padding-top', 100, 60, 767.98, 379.98);
+      @include adaptiveValue('padding-bottom', 100, 60, 767.98, 379.98);
+      @include adaptiveValue('padding-right', 60, 16, 767.98, 379.98);
+      @include adaptiveValue('padding-left', 60, 16, 767.98, 379.98);
+    }
+
+    @media (max-width: $mobileSmall) {
+      padding: 60px 16px;
+      @include adaptiveValue('gap', 40, 20, 379.98, 319.98);
     }
   }
 
@@ -31,11 +41,24 @@
       font-style: italic;
       color: #b0907a;
     }
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue('font-size', 72, 42, 767.98, 379.98);
+      line-height: 115%;
+    }
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('font-size', 42, 30, 379.98, 319.98);
+    }
   }
 
   &__text {
     color: #e1d4c9;
     line-height: 150%;
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('font-size', 16, 14, 379.98, 319.98);
+    }
   }
 
   &__btn {
@@ -60,20 +83,35 @@
         width: 20px;
         height: 20px;
         top: -2px;
-        right: -25px; // -27
+        right: -25px;
         opacity: 0;
         visibility: hidden;
         transition: all 0.2s ease 0s;
-      }
 
-      @media (max-width: $mobile) {
-        &::after {
+        @media (max-width: $mobile) {
           right: -27px;
         }
       }
     }
 
-    &:hover {
+    @media (min-width: 768px) {
+      &:hover {
+        span {
+          right: 8px;
+
+          @media (max-width: $tablet) {
+            right: 13px;
+          }
+
+          &::after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
       span {
         right: 8px;
 
@@ -86,6 +124,16 @@
           visibility: visible;
         }
       }
+    }
+
+    @media (max-width: 479.98px) {
+      padding: 25px 25px 23px 25px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('max-width', 200, 150, 379.98, 319.98);
+      @include adaptiveValue('padding', 25, 15, 379.98, 319.98);
+      @include adaptiveValue('font-size', 16, 14, 379.98, 319.98);
     }
   }
 }

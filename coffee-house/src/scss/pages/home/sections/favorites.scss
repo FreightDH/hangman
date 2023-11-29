@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('gap', 40, 20, 379.98, 319.98);
+    }
   }
 
   &__title {
@@ -19,6 +23,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $mobile) {
+      justify-content: center;
+    }
   }
 
   &__navigation {
@@ -36,6 +44,10 @@
     background: url('@img/icons/slider/slider-arrow.svg') center / 24px 24px no-repeat;
     transition: all 0.2s ease 0s;
 
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
     &:hover {
       background: url('@img/icons/slider/slider-arrow-light.svg') center / 24px 24px no-repeat;
       background-color: #665f55;
@@ -44,7 +56,7 @@
     &.navigation--left {
       left: 5px;
 
-      @media (max-width: $mobile) {
+      @media (max-width: 768px) {
         left: 0px;
       }
     }
@@ -53,7 +65,7 @@
       right: 5px;
       transform: rotate(180deg);
 
-      @media (max-width: $mobile) {
+      @media (max-width: 768px) {
         right: 0px;
       }
     }
@@ -70,32 +82,66 @@
   text-align: center;
 
   &__image {
+    width: 480px;
+    height: 480px;
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue('width', 480, 348, 767.98, 379.98);
+      @include adaptiveValue('height', 480, 348, 767.98, 379.98);
+    }
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('width', 348, 290, 379.98, 319.98);
+      @include adaptiveValue('height', 348, 290, 379.98, 319.98);
+    }
+
     img {
-      width: 480px;
-      height: 480px;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }
 
   &__body {
     width: 480px;
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue('width', 480, 348, 767.98, 379.98);
+    }
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('width', 348, 290, 379.98, 319.98);
+    }
   }
 
   &__name {
     font-size: 24px;
     line-height: 125%;
     font-weight: 600;
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('font-size', 24, 20, 379.98, 319.98);
+    }
   }
 
   &__text {
     padding: 16px 0;
     line-height: 150%;
+
+    @media (max-width: $mobileSmall) {
+      padding: 10px 0;
+      @include adaptiveValue('font-size', 16, 14, 379.98, 319.98);
+    }
   }
 
   &__cost {
     font-size: 24px;
     font-weight: 600;
     line-height: 125%;
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('font-size', 24, 20, 379.98, 319.98);
+    }
   }
 }
 

@@ -4,7 +4,21 @@
   width: 200px;
   padding: 12px 20px;
 
+  @media (max-width: $mobileSmall) {
+    @include adaptiveValue('width', 200, 150, 379.98, 319.98);
+    @include adaptiveValue('padding-top', 12, 8, 379.98, 319.98);
+    @include adaptiveValue('padding-bottom', 12, 8, 379.98, 319.98);
+    @include adaptiveValue('padding-left', 20, 10, 379.98, 319.98);
+    @include adaptiveValue('padding-right', 20, 10, 379.98, 319.98);
+
+    svg {
+      @include adaptiveValue('width', 36, 30, 379.98, 319.98);
+      @include adaptiveValue('height', 36, 30, 379.98, 319.98);
+    }
+  }
+
   display: flex;
+  align-items: center;
   gap: 8px;
 
   border-radius: 100px;
@@ -21,19 +35,30 @@
     font-weight: 600;
     line-height: 140%;
 
+    @media (max-width: $mobileSmall) {
+      line-height: 125%;
+    }
+
     span {
       display: block;
       font-size: 16px;
       line-height: 150%;
+
+      @media (max-width: $mobileSmall) {
+        line-height: 125%;
+        @include adaptiveValue('font-size', 16, 14, 379.98, 319.98);
+      }
     }
   }
 
-  &:hover {
-    background-color: #665f55;
-    color: #e1d4c9;
+  @media (min-width: $mobile) {
+    &:hover {
+      background-color: #665f55;
+      color: #e1d4c9;
 
-    svg path {
-      fill: #e1d4c9;
+      svg path {
+        fill: #e1d4c9;
+      }
     }
   }
 }

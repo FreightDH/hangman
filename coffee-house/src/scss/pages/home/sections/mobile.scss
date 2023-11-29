@@ -7,21 +7,43 @@
     @media (max-width: 1200px) {
       flex-direction: column;
     }
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue('gap', 100, 40, 767.98, 379.98);
+    }
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('gap', 40, 20, 379.98, 319.98);
+    }
   }
 
   &__text {
     padding: 40px 0;
     line-height: 150%;
+
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue('padding-top', 40, 20, 379.98, 319.98);
+      @include adaptiveValue('padding-bottom', 40, 20, 379.98, 319.98);
+    }
   }
 
   &__buttons {
     display: flex;
     gap: 20px;
+
+    @media (max-width: 479.98px) {
+      flex-direction: column;
+    }
   }
 
   &__image {
     width: 630px;
     height: 630px;
+
+    @media (max-width: $mobile) {
+      width: auto;
+      height: auto;
+    }
 
     img {
       width: 100%;
