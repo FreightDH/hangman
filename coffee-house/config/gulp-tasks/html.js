@@ -2,7 +2,7 @@ import webpHtmlNosvg from 'gulp-webp-html-nosvg';
 
 export const html = () => {
   return app.gulp
-    .src(`${app.path.build.html}*.html`)
+    .src(`${app.path.build.html}/pages/*.html`)
     .pipe(
       app.plugins.plumber(
         app.plugins.notify.onError({
