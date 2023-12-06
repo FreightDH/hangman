@@ -90,8 +90,8 @@ export const createElement = (tag = 'div', classname = '', content = '') => {
 };
 //----------------------------------------------------------------------
 // СОЗДАНИЕ КАРТОЧКИ НА СТРАНИЦЕ С МЕНЮ
-export const createCard = (info) => {
-  const card = createElement('li', 'cards__card');
+export const createCard = (info, willHide) => {
+  const card = createElement('li', `cards__card ${willHide ? 'card--hidden' : ''}`);
   const cardImage = createElement(
     'div',
     'card__image',

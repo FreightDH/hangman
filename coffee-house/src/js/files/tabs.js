@@ -37,10 +37,15 @@ const handleClick = (event, currentItem, tabs) => {
 
 const generateCards = (infoArray) => {
   const menuList = document.querySelector('.cards');
+  const loadMoreButton = document.querySelector('.menu__more');
   menuList.innerHTML = '';
 
-  infoArray.forEach((info) => {
-    const card = createCard(info);
+  if (infoArray.length < 5) loadMoreButton.classList.remove('more--visible');
+  else loadMoreButton.classList.add('more--visible');
+
+  infoArray.forEach((info, index) => {
+    const willHide = index > 3 ? true : false;
+    const card = createCard(info, willHide);
     menuList.appendChild(card);
   });
 };

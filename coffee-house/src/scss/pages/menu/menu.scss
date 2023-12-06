@@ -14,7 +14,7 @@
     text-align: center;
   }
 
-  &__refresh {
+  &__more {
     display: none;
     padding: 18px;
     width: 60px;
@@ -28,8 +28,14 @@
       object-fit: cover;
     }
 
+    &.more--visible {
+      display: none;
+    }
+
     @media (max-width: 768px) {
-      display: block;
+      &.more--visible {
+        display: block;
+      }
     }
 
     @media (max-width: $mobileSmall) {
@@ -144,7 +150,9 @@
 
     @media (max-width: 768px) {
       &:nth-child(n + 5) {
-        display: none;
+        &.card--hidden {
+          display: none;
+        }
       }
     }
 
