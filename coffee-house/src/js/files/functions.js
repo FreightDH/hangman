@@ -89,3 +89,21 @@ export const createElement = (tag = 'div', classname = '', content = '') => {
   return element;
 };
 //----------------------------------------------------------------------
+// СОЗДАНИЕ КАРТОЧКИ НА СТРАНИЦЕ С МЕНЮ
+export const createCard = (info) => {
+  const card = createElement('li', 'cards__card');
+  const cardImage = createElement(
+    'div',
+    'card__image',
+    `<img src=${info.img} alt=${info.name.toLowerCase().split(' ').join('-')} />`,
+  );
+  const cardBody = createElement('div', 'card__body');
+  const cardName = createElement('div', 'card__name', info.name);
+  const cardText = createElement('p', 'card__text', info.text);
+  const cardCost = createElement('div', 'card__cost', info.cost);
+
+  cardBody.append(cardName, cardText, cardCost);
+  card.append(cardImage, cardBody);
+
+  return card;
+};
