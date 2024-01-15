@@ -1,5 +1,5 @@
 @function toRem($px) {
-  $result: math.div($px, 16) + toRem;
+  $result: math.div($px, 16) + rem;
   @return $result;
 }
 

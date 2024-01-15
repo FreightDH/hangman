@@ -7,11 +7,12 @@
 //<ШРИФТЫ>
 //<Подключаем шрифты>
 // @import "fonts/fonts";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800,900);
 //</Подключаем шрифты>
 
 //<Шрифт по умолчанию>
-$fontFamily: '';
-$fontSize: toRem(16);
+$fontFamily: 'Montserrat';
+$fontSize: toRem(28);
 $mainColor: #000;
 //</Шрифт по умолчанию>
 //</ШРИФТЫ>
@@ -102,21 +103,17 @@ body {
   min-height: 100%;
   overflow: hidden;
   // Прижимаем footer
-  /*
-	display: flex;
-	flex-direction: column;
-	> main {
-		flex: 1 1 auto;
-	} 
-	*/
-  // &.loaded {}
+  display: flex;
+  flex-direction: column;
+  > main {
+    flex: 1 1 auto;
+  }
 }
 //</ОБОЛОЧКА>
 
 //<ПОДЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
-// @import "header";
-// @import "home";
-// @import "footer";
+@import 'home';
+@import 'footer';
 //</ПОДЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>

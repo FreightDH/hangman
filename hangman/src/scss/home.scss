@@ -1,0 +1,125 @@
+.game {
+  &__body {
+    display: flex;
+    gap: 80px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    &:first-child {
+      gap: 30px;
+    }
+
+    &:last-child {
+      padding: 50px 0px 0px 0px;
+    }
+  }
+
+  &__gallows {
+    width: 350px;
+    height: 350px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 12px;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  &__word {
+    margin: 0px 0px 50px 0px;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__counter {
+    span {
+      color: red;
+    }
+  }
+
+  &__keyboard {
+    margin: 50px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.word {
+  &__letter {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 50px 0px 0px;
+  }
+}
+
+.letter {
+  &__underscore {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 45px;
+      height: 4px;
+      top: 0;
+      left: 0;
+      background-color: #000;
+    }
+  }
+}
+
+.keyboard {
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 65px;
+    height: 55px;
+
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+
+    background-color: #5455ac;
+    border-radius: 10px;
+    transition: all 0.2s ease 0s;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: #383985;
+    }
+  }
+}
