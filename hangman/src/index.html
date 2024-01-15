@@ -8,8 +8,58 @@
 
   <body>
     <div class="wrapper">
-      <main class="content"></main>
+      <main class="content">
+        <section class="game">
+          <div class="game__container">
+            <div class="game__body">
+              <div class="game__column">
+                <div class="game__gallows"><img src="img/gallows.svg" alt="gallows-icon" /></div>
+                <h1 class="game__title">Hangman Game</h1>
+              </div>
+              <div class="game__column">
+                <div class="game__word">
+                  <div class="word__letter">
+                    <div class="letter__text"></div>
+                    <div class="letter__underscore"></div>
+                  </div>
+                  <div class="word__letter">
+                    <div class="letter__text"></div>
+                    <div class="letter__underscore"></div>
+                  </div>
+                  <div class="word__letter">
+                    <div class="letter__text"></div>
+                    <div class="letter__underscore"></div>
+                  </div>
+                  <div class="word__letter">
+                    <div class="letter__text"></div>
+                    <div class="letter__underscore"></div>
+                  </div>
+                  <div class="word__letter">
+                    <div class="letter__text"></div>
+                    <div class="letter__underscore"></div>
+                  </div>
+                  <div class="word__letter">
+                    <div class="letter__text"></div>
+                    <div class="letter__underscore"></div>
+                  </div>
+                </div>
+                <p class="game__hint">Hint: A human-powered vehicle with two wheels.</p>
+                <div class="game__counter">Incorrect guesses: <span>0 / 6</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="footer__copyright">
+            <a href="https://github.com/FreightDH" target="_blank" rel="noopener">FreightDH</a> © 2024 All
+            Rights Reserved |
+            <a href="https://rs.school/js/" target="_blank" rel="noopener">RSSchool</a>
+          </p>
+        </div>
+      </footer>
     </div>
-    <script src="./app.js" type="module"></script>
+    <script src="app.js" type="module"></script>
   </body>
 </html>
