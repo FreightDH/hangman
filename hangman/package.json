@@ -1,0 +1,32 @@
+{
+  "name": "hangman",
+  "version": "1.0.0",
+  "description": "Hangman game using vanilla JS",
+  "main": "webpack.base.config.js",
+  "scripts": {
+    "start": "webpack serve --open --config ./config/webpack.config.js --env mode=dev",
+    "build": "webpack --config ./config/webpack.config.js --env mode=prod",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier . --write"
+  },
+  "author": "Max Zolotkov",
+  "devDependencies": {
+    "clean-webpack-plugin": "latest",
+    "copy-webpack-plugin": "latest",
+    "css-loader": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-prettier": "latest",
+    "eslint-webpack-plugin": "latest",
+    "html-webpack-plugin": "latest",
+    "prettier": "latest",
+    "sass": "latest",
+    "sass-loader": "latest",
+    "style-loader": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "webpack-dev-server": "latest",
+    "webpack-merge": "latest"
+  }
+}
