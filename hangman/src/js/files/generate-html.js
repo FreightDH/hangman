@@ -1,4 +1,4 @@
-import { dataCodes, labels } from './keys-labels';
+import { dataCodes, labels } from './info/keys-labels';
 
 const generateHtml = () => {
   const keyboard = document.createElement('div');

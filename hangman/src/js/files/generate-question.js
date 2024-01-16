@@ -1,5 +1,5 @@
-import { createElement, getRandomNumber } from './helpers.js';
-import questions from './questions.js';
+import { createElement, getRandomNumber } from './helpers';
+import questions from './info/questions';
 
 const generateQuestion = () => {
   const wordWrapper = document.querySelector('.game__word');
