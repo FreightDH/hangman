@@ -1,14 +1,14 @@
 const initMouseInput = () => {
   const keyboard = document.querySelector('.game__keyboard');
-  const answerLength = 6;
-  let inputLettersCount = 0;
 
   keyboard.addEventListener('click', (event) => {
-    const key = event.target;
-    const underscores = document.querySelectorAll('.letter__text');
+    if (window.inputLettersCount < window.answerLength) return;
 
-    if (inputLettersCount !== answerLength && key.closest('.keyboard__key')) {
-      underscores[inputLettersCount++].textContent = key.textContent;
+    const key = event.target;
+    const underscores = document.getElementsByClassName('letter__text');
+
+    if (key.closest('.keyboard__key')) {
+      underscores[window.inputLettersCount++].textContent = key.textContent;
     }
   });
 };
