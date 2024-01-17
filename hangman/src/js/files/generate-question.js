@@ -1,6 +1,20 @@
 import { createElement, getRandomNumber } from './helpers';
 import questions from './info/questions';
 
+const getNewWord = (prevWord) => {
+  let randIdx = 0;
+
+  do {
+    randIdx = getRandomNumber(0, Object.keys(questions).length - 1);
+  } while (Object.keys(questions)[randIdx] === prevWord);
+
+  const word = Object.keys(questions)[randIdx];
+  const question = questions[word];
+
+  window.prevWord = word;
+  return { word, question };
+};
+
 const generateQuestion = () => {
   const wordWrapper = document.querySelector('.game__word');
   const hint = document.querySelector('.game__hint');
@@ -14,7 +28,7 @@ const generateQuestion = () => {
     const letter = createElement(
       'div',
       'word__letter',
-      '<div class="letter__text"></div>\n<div class="letter__underscore"></div>'
+      '<div class="letter__text"></div>\n<div class="letter__underscore"></div>',
     );
 
     wordWrapper.appendChild(letter);
@@ -25,20 +39,6 @@ const generateQuestion = () => {
 
   window.answerLength = word.length;
   window.inputLettersCount = 0;
-};
-
-const getNewWord = (prevWord) => {
-  let randIdx = 0;
-
-  do {
-    randIdx = getRandomNumber(0, Object.keys(questions).length - 1);
-  } while (Object.keys(questions)[randIdx] === prevWord);
-
-  const word = Object.keys(questions)[randIdx];
-  const question = questions[word];
-
-  window.prevWord = word;
-  return { word, question };
 };
 
 export default generateQuestion;
