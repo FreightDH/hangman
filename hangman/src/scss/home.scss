@@ -117,7 +117,8 @@
 
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &.active {
       background-color: #383985;
     }
   }

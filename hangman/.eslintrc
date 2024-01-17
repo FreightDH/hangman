@@ -21,5 +21,6 @@
     "no-multi-assign": "off",
     "no-plusplus": "off",
     "import/extensions": "off",
+    "no-use-before-define": "off",
   },
 }
