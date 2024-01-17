@@ -3,6 +3,7 @@
 
   &__copyright {
     font-size: 16px;
+    @include adaptiveValue('font-size', 16, 13);
     font-weight: 400;
     text-align: center;
 
