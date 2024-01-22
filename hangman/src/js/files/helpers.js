@@ -29,11 +29,11 @@ const checkInputLetter = (key, underscores) => {
   }
 };
 
-const checkLose = () => {
+const checkLost = () => {
   const incorrectCounterElement = document.querySelector('.game__counter span');
   const count = +incorrectCounterElement.textContent;
 
-  if (count === 6) console.log('you lost!');
+  if (count === 6) window.isLost = true;
 };
 
-export { checkInputLetter, checkLose, createElement, getRandomNumber };
+export { checkInputLetter, checkLost, createElement, getRandomNumber };
