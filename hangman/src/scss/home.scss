@@ -124,6 +124,14 @@
 .man {
   &__wrapper {
     position: relative;
+
+    div {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
   }
 
   &__head {
@@ -236,6 +244,11 @@
       &.active {
         background-color: #383985;
       }
+    }
+
+    &.disabled {
+      cursor: auto;
+      background-color: rgb(193, 193, 193);
     }
   }
 }

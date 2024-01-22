@@ -4,8 +4,8 @@ import questions from './info/questions';
 const generateQuestion = () => {
   const wordWrapper = document.querySelector('.game__word');
   const hint = document.querySelector('.game__hint');
-  const incorrectCounter = document.querySelector('.game__counter span');
-  const prevWord = window.prevWord || '';
+  const incorrectCounter = document.querySelector('.game__counter');
+  const prevWord = window.currentWord || '';
   const { word, question } = getNewWord(prevWord);
 
   wordWrapper.innerHTML = '';
@@ -21,7 +21,7 @@ const generateQuestion = () => {
   }
 
   hint.textContent = `Hint: ${question}`;
-  incorrectCounter.textContent = `0 / ${word.length}`;
+  incorrectCounter.innerHTML = `Incorrect guesses: <span>0</span> / 6`;
 
   window.answerLength = word.length;
   window.inputLettersCount = 0;
@@ -37,7 +37,7 @@ const getNewWord = (prevWord) => {
   const word = Object.keys(questions)[randIdx];
   const question = questions[word];
 
-  window.prevWord = word;
+  window.currentWord = word;
   return { word, question };
 };
 

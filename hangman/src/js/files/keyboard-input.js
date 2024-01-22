@@ -1,3 +1,5 @@
+import { checkInputLetter, checkLose } from './helpers';
+
 const initKeyboardInput = () => {
   const keys = document.querySelectorAll('.keyboard__key');
 
@@ -8,9 +10,10 @@ const initKeyboardInput = () => {
     const key = Array.from(keys).find((element) => element.dataset.code === keyName);
     const underscores = document.getElementsByClassName('letter__text');
 
-    if (!key) return;
+    if (!key || key.classList.contains('disabled')) return;
 
-    underscores[window.inputLettersCount++].textContent = key.textContent;
+    checkInputLetter(key, underscores);
+    checkLose();
     key.classList.add('active');
   });
 
@@ -18,8 +21,9 @@ const initKeyboardInput = () => {
     const keyName = event.code;
     const key = Array.from(keys).find((element) => element.dataset.code === keyName);
 
-    if (!key) return;
+    if (!key || key.classList.contains('disabled')) return;
 
+    key.classList.add('disabled');
     key.classList.remove('active');
   });
 };

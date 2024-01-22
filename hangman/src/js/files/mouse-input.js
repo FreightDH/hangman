@@ -1,3 +1,5 @@
+import { checkInputLetter, checkLose } from './helpers';
+
 const initMouseInput = () => {
   const keyboard = document.querySelector('.game__keyboard');
 
@@ -6,8 +8,10 @@ const initMouseInput = () => {
     const key = event.target;
     const underscores = document.getElementsByClassName('letter__text');
 
-    if (key.closest('.keyboard__key')) {
-      underscores[window.inputLettersCount++].textContent = key.textContent;
+    if (key.closest('.keyboard__key') && !key.classList.contains('disabled')) {
+      checkInputLetter(key, underscores);
+      checkLose();
+      key.classList.add('disabled');
     }
   });
 };
