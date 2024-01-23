@@ -1,3 +1,5 @@
+import { fillPopup, openPopup } from './popup';
+
 const createElement = (tag = 'div', classname = '', content = '') => {
   const element = document.createElement(tag);
   element.className = `${classname}`;
@@ -17,6 +19,7 @@ const checkInputLetter = (key, underscores) => {
       if (inputLetter === letter) {
         underscores[index].textContent = inputLetter;
         window.inputLettersCount++;
+        console.log('increment');
       }
     });
   } else {
@@ -33,7 +36,25 @@ const checkLost = () => {
   const incorrectCounterElement = document.querySelector('.game__counter span');
   const count = +incorrectCounterElement.textContent;
 
-  if (count === 6) window.isLost = true;
+  if (count === 6) {
+    const popup = document.querySelector('.popup');
+    fillPopup('lose');
+    openPopup(popup);
+    window.isLost = true;
+  }
 };
 
-export { checkInputLetter, checkLost, createElement, getRandomNumber };
+const checkWin = () => {
+  const inputWord = Array.from(document.querySelectorAll('.letter__text'))
+    .map((item) => item.textContent)
+    .join('')
+    .toLowerCase();
+
+  if (inputWord === window.currentWord) {
+    const popup = document.querySelector('.popup');
+    fillPopup('win');
+    openPopup(popup);
+  }
+};
+
+export { createElement, getRandomNumber, checkInputLetter, checkLost, checkWin };

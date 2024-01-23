@@ -1,7 +1,7 @@
-import { checkInputLetter, checkLost } from './helpers';
+import { checkInputLetter, checkLost, checkWin } from './helpers';
 
 const initKeyboardInput = () => {
-  const keys = document.querySelectorAll('.keyboard__key');
+  const keys = document.getElementsByClassName('keyboard__key');
 
   document.addEventListener('keydown', (event) => {
     if (window.inputLettersCount === window.answerLength || window.isLost) return;
@@ -14,6 +14,7 @@ const initKeyboardInput = () => {
 
     checkInputLetter(key, underscores);
     checkLost();
+    checkWin();
     key.classList.add('active');
   });
 

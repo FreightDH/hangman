@@ -3,7 +3,12 @@ import { dataCodes, labels } from './info/keys-labels';
 
 const generateHtml = () => {
   const keyboard = generateKeyboard();
+  const prevKeyboard = document.querySelector('.keyboard');
   const manIcon = generateManIcon();
+  const prevManIcon = document.querySelector('.man__wrapper');
+
+  if (prevKeyboard) prevKeyboard.remove();
+  if (prevManIcon) prevManIcon.remove();
 
   document.querySelectorAll('.game__column')[1].appendChild(keyboard);
   document.querySelector('.gallows__man').appendChild(manIcon);
@@ -11,7 +16,7 @@ const generateHtml = () => {
 
 const generateKeyboard = () => {
   const keyboard = document.createElement('div');
-  keyboard.classList.add('game__keyboard');
+  keyboard.className = 'game__keyboard keyboard';
 
   const keys = [];
 

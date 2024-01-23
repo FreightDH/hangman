@@ -1,4 +1,4 @@
-import { checkInputLetter, checkLost } from './helpers';
+import { checkInputLetter, checkLost, checkWin } from './helpers';
 
 const initMouseInput = () => {
   const keyboard = document.querySelector('.game__keyboard');
@@ -12,6 +12,7 @@ const initMouseInput = () => {
     if (key.closest('.keyboard__key') && !key.classList.contains('disabled')) {
       checkInputLetter(key, underscores);
       checkLost();
+      checkWin();
       key.classList.add('disabled');
     }
   });
