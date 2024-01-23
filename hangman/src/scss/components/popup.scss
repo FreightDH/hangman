@@ -1,0 +1,93 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.2s ease 0s;
+
+  &.popup-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+
+  &__content {
+    padding: 20px;
+    @include adaptiveValue('padding-left', 20, 10);
+    @include adaptiveValue('padding-right', 20, 10);
+    border-radius: 10px;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    @include adaptiveValue('gap', 15, 10);
+  }
+
+  &__icon {
+    margin: 0px 0px 15px 0px;
+    width: 70px;
+    height: 70px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__message {
+    font-size: 22px;
+    @include adaptiveValue('font-size', 22, 20);
+    font-weight: 500;
+  }
+
+  &__answer {
+    font-size: 20px;
+    @include adaptiveValue('font-size', 20, 18);
+    font-weight: 400;
+
+    span {
+      font-weight: 500;
+      font-style: italic;
+    }
+  }
+
+  &__button {
+    margin: 10px 0px 0px 0px;
+    @include adaptiveValue('margin-top', 10, 5);
+    display: inline-block;
+    padding: 10px 20px;
+
+    font-size: 18px;
+    @include adaptiveValue('font-size', 18, 16);
+    font-weight: 600;
+    color: #fff;
+
+    border-radius: 10px;
+    background-color: #5455ac;
+    transition: all 0.2s ease 0s;
+
+    @media (min-width: 768px) {
+      &:hover {
+        background-color: #383985;
+      }
+    }
+  }
+}

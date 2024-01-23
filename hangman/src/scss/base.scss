@@ -1,0 +1,10 @@
+// Общие стили
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import 'components/keyboard';
+@import 'components/man';
+@import 'components/popup';

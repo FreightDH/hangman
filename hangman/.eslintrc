@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+  },
+  "root": true,
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+    "import/no-mutable-exports": "off",
+    "no-mutable-exports": "off",
+    "no-param-reassign": "off",
+    "no-multi-assign": "off",
+    "no-plusplus": "off",
+    "import/extensions": "off",
+    "no-use-before-define": "off",
+  },
+}

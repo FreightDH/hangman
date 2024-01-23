@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="content">
+        <section class="game">
+          <div class="game__container">
+            <div class="game__body">
+              <div class="game__column">
+                <div class="game__gallows">
+                  <img src="img/gallows.svg" alt="gallows-icon" />
+                  <div class="gallows__man man"></div>
+                </div>
+                <h1 class="game__title">Hangman Game</h1>
+              </div>
+              <div class="game__column">
+                <div class="game__word"></div>
+                <p class="game__hint"></p>
+                <div class="game__counter"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="popup">
+          <div class="popup__body">
+            <div class="popup__content">
+              <div class="popup__icon"></div>
+              <p class="popup__message"></p>
+              <p class="popup__answer">The answer is: <span></span>.</p>
+              <button class="popup__button"><span>Play again</span></button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="footer__copyright">
+            <a href="https://github.com/FreightDH" target="_blank" rel="noopener">FreightDH</a> © 2024 All
+            Rights Reserved
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="./src/js/app.js" type="module"></script>
+  </body>
+</html>
